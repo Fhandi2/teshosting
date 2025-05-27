@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.box {
+    display: flex;
+    height: 100vh;
+}
+
+.left-box {
+    background-color: gold;
+    width: 20rem;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.left-box img {
+    width: 8rem;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+.left-box h1 {
+    color: black;
+    font-weight: 800;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.boxes {
+    margin-top: 50px;
+}
+
+.box-in {
+    width: 100%;
+    height: 50px;
+    background-color: brown;
+    color: gold;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box-in:hover {
+    background-color: gold;
+    color: brown;
+    border: solid 2px brown;
+}
+
+.box-on {
+    background-color: rgb(255, 65, 65);
+}
+
+.right-box {
+    background-image: url(../asset/backgroundhero2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: auto;
+    padding: 20px;
+}
+
+.nav img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 30px 20px;
+}
+
+.card {
+    background-color:gold;
+    width: 300px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card h3 {
+    font-size: 1.7rem;
+}
+
+/* ====================================== */
+/* ====================================== */
+.nav-pilh {
+    display: none;
+}
+
+/* ========================================================================== */
+/* ========================================================================== */
+/* ========================================================================== */
+
+/* tabel */
+@media (max-width: 758px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    .right-box .nav {
+        padding: none;
+    }
+
+}
+/* handphone */
+@media (max-width: 470px) {
+    html {
+        font-size: 60%;
+    }
+    
+    .left-box {
+        display: none;
+    }
+
+    #cards {
+        padding: 30px 0;
+    }
+
+    .card {
+        width: 115px;
+        height: 80px;
+    }
+
+    .right-box {
+        padding: 0;
+    }
+
+    .nav img {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+     .nav-pilh {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.up {
+    width: 50%;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    z-index: 5;
+    /* margin-bottom: 100px; */
+    background: rgba(0, 0, 0, 0.212);  /* semi transparan */
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);           /* efek blur kaca */
+    -webkit-backdrop-filter: blur(10px);   /* untuk Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: white;
+    cursor: pointer;
+}
+
+.pil {
+    width: 90%;
+    position: fixed;
+    bottom: -100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.212);  /* semi transparan */
+    border-radius: 16px;
+    padding: 20px;
+    backdrop-filter: blur(10px);           /* efek blur kaca */
+    -webkit-backdrop-filter: blur(10px);   /* untuk Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: white;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: 0.4s linear;
+}
+
+.add {
+    bottom: 90px;
+    opacity: 1;
+}
+
+.pil ul li {
+    font-size: 2rem;
+    margin: 10px;
+    list-style: none;
+    font-weight: 800;
+    background-color: rgba(255, 0, 0, 0.507);
+    padding: 10px;
+    border-radius: 20px;
+    color: white;
+}
+}
+
+
+/* lain lagi */
+
+@media (max-width: 393px) {
+    .card {
+        width: 100px;
+        height: 70px;
+    }
+}
